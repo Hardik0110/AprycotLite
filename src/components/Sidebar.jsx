@@ -1,7 +1,7 @@
+// Sidebar.jsx with adjusted logo sizing
 import React, { useState } from 'react'
 import MainLogo from '../assets/MainLogo.png'
 import Logo from '../assets/Logo.png'
-import { LayoutDashboard, Users, Settings, Package, Mail, FileText, LogOut , Component} from 'lucide-react'
 import DashboardIcon from '../assets/DashboardIcon.png'
 import Game from '../assets/Game.png'
 import ShieldDone from '../assets/Shield Done.png'
@@ -9,6 +9,7 @@ import User from '../assets/3 User.png'
 import Utilities from '../assets/Utilities.png'
 import Wallet from '../assets/Wallet.png'
 import TicketStar from '../assets/Ticket Star.png'
+import Searchbar from './Searchbar'
 
 const Sidebar = () => {
   const [expanded, setExpanded] = useState(false);
@@ -17,59 +18,67 @@ const Sidebar = () => {
     {
       title: "Home",
       items: [
-        { name: "Dashboard", icon: () => <img src={DashboardIcon} className='hover:bg-gray-200 '/>, path: "/" },
+        { name: "Dashboard", icon: DashboardIcon, path: "/" },
       ]
     },
     {
       title: "Pages",
       items: [
-        { name: "Special Pages", icon: () => <img src={Game} className='hover:bg-gray-200 '/>, path: "/special" },
-        { name: "Authentication", icon: () => <img src={ShieldDone} className='hover:bg-gray-200 border-radius: [100%] '/>, path: "/auth" },
-        { name: "Users", icon: () => <img src={User} className='hover:bg-gray-200 bg-orange-500 outline-style: solid;'/>, path: "/users" },
-        { name: "Utilities", icon: () => <img src={Utilities} />, path: "/utilities" },
+        { name: "Special Pages", icon: Game, path: "/special" },
+        { name: "Authentication", icon: ShieldDone, path: "/auth" },
+        { name: "Users", icon: User, path: "/users" },
+        { name: "Utilities", icon: Utilities, path: "/utilities" },
       ]
     },
     {
       title: "Elements",
       items: [
-        { name: "Components", icon: () => <img src={Wallet} />, path: "/components" },
-        { name: "Widgets", icon: () => <img src={TicketStar} />, path: "/widgets" },
+        { name: "Components", icon: Wallet, path: "/components" },
+        { name: "Widgets", icon: TicketStar, path: "/widgets" },
       ]
     }
-  ]
+  ];
 
   return (
-    <aside className="h-screen fixed top-2 left-0">
+    <div className="flex min-h-screen bg-gray-50">
+      {/* Sidebar */}
       <nav 
-        className={`h-full flex flex-col bg-white border-r shadow-sm transition-all duration-300 gap-8
-          ${expanded ? "w-45" : "w-20 "}`}
+        className={`fixed top-2 left-0 h-[calc(100vh-16px)] bg-white border-r shadow-sm transition-all duration-300 ease-in-out z-10
+          ${expanded ? "w-[257px]" : "w-20"}`}
         onMouseEnter={() => setExpanded(true)}
         onMouseLeave={() => setExpanded(false)}
       >
-        <div className="flex justify-between items-center">
-          <div className="overflow-hidden transition-all duration-4000 ease-in-out">
+        <div className="p-4 flex justify-center items-center h-16">
+          <div className={`transition-all duration-300 ease-in-out overflow-hidden
+            ${expanded ? "w-full" : "w-12"}`}>
             {expanded ? (
-              <img src={MainLogo} alt="Main Logo" className="gap-2" />
+              <div className="w-full flex justify-start">
+                <img 
+                  src={MainLogo} 
+                  alt="Main Logo" 
+                  className="h-12 w-auto"  // Adjusted height and made width auto
+                />
+              </div>
             ) : (
               <button 
-            onClick={() => setExpanded((curr) => !curr)}
-            className={`rounded-lg bg-gray-50 hover:bg-gray-100 ${expanded ? 'opacity-0' : 'opacity-100'}`}
-          >
-            <img 
-              src={Logo} 
-              alt="Toggle" 
-              className={`rounded-lg bg-gray-50 hover:bg-gray-100 ${expanded ? 'opacity-0' : 'opacity-100'}`}
-            />
-          </button>
+                onClick={() => setExpanded(curr => !curr)}
+                className="w-12 h-12 rounded-lg hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center"
+              >
+                <img 
+                  src={Logo} 
+                  alt="Toggle" 
+                  className="h-10 w-10"  // Increased size of collapsed logo
+                />
+              </button>
             )}
           </div>
-
         </div>
-        <div className="flex-1 px-3 ">
+
+        <div className="flex-1 px-3 overflow-y-auto">
           {sidebarItems.map((section, index) => (
-            <div key={section.title} className={`border-b border-width: 3px  ${index !== 0 ? "mt-4" : ""}`}>
+            <div key={section.title} className={`pb-4 ${index !== 0 ? "mt-6" : ""} border-b border-gray-200`}>
               {expanded && (
-                <p className="text-s font-semibold test-decoration-line: underline  text-gray-500 mb-2 px-3 justify-start ">
+                <p className="text-sm font-semibold text-gray-500 mb-3 px-3">
                   {section.title}
                 </p>
               )}
@@ -77,13 +86,18 @@ const Sidebar = () => {
                 {section.items.map((item) => (
                   <li
                     key={item.name}
-                    className="relative flex items-center py-2 px-3 font-medium rounded-md cursor-pointer
-                      transition-colors group hover:bg-orange-500 text-gray-600 hover:text-white"
+                    className="group relative flex items-center py-2 px-3 rounded-md cursor-pointer
+                      transition-all duration-200 ease-in-out hover:bg-orange-500"
                   >
-                    <item.icon className="w-5 h-5" />
-                    <span className={`overflow-hidden transition-all ${
-                      expanded ? "w-32 ml-3" : "w-0"
-                    }`}>
+                    <div className="w-8 h-8 flex items-center justify-center">
+                      <img 
+                        src={item.icon} 
+                        alt={item.name}
+                        className="w-6 h-6 group-hover:brightness-[200%] transition-all duration-200" 
+                      />
+                    </div>
+                    <span className={`whitespace-nowrap overflow-hidden transition-all duration-300 ease-in-out
+                      ${expanded ? "ml-3 opacity-100 w-32" : "w-0 opacity-0"} group-hover:text-white`}>
                       {item.name}
                     </span>
                   </li>
@@ -92,22 +106,16 @@ const Sidebar = () => {
             </div>
           ))}
         </div>
-        {/* <ul className="flex-1 px-3 space-y-2">
-          {sidebarItems.map((item) => (
-            <li
-              key={item.name}
-              className="relative flex items-center py-2 px-3 font-medium rounded-md cursor-pointer
-                transition-colors group hover:bg-indigo-50 text-gray-600"
-            >
-              <item.icon className="w-5 h-5" />
-              <span className={`overflow-hidden transition-all ${expanded ? "w-32 ml-3" : "w-0"}`}>
-                {item.name}
-              </span>
-            </li>
-          ))}
-        </ul> */}
       </nav>
-    </aside>
+
+      {/* Main Content */}
+      <div className={`flex-1 transition-all duration-300 ease-in-out ${expanded ? "ml-[257px]" : "ml-20"}`}>
+        <div className="fixed top-2 left-0 right-0 transition-all duration-300 ease-in-out" 
+             style={{ marginLeft: expanded ? '257px' : '80px' }}>
+          <Searchbar isExpanded={expanded} />
+        </div>
+      </div>
+    </div>
   );
 };
 
