@@ -1,32 +1,55 @@
 import React, { useState } from 'react'
 import MainLogo from '../assets/MainLogo.png'
 import Logo from '../assets/Logo.png'
-import { LayoutDashboard, Users, Settings, Package, Mail, FileText, LogOut } from 'lucide-react'
+import { LayoutDashboard, Users, Settings, Package, Mail, FileText, LogOut , Component} from 'lucide-react'
+import DashboardIcon from '../assets/DashboardIcon.png'
+import Game from '../assets/Game.png'
+import ShieldDone from '../assets/Shield Done.png'
+import User from '../assets/3 User.png'
+import Utilities from '../assets/Utilities.png'
+import Wallet from '../assets/Wallet.png'
+import TicketStar from '../assets/Ticket Star.png'
 
 const Sidebar = () => {
   const [expanded, setExpanded] = useState(false);
 
   const sidebarItems = [
-    { name: "Dashboard", icon: LayoutDashboard, path: "/" },
-    { name: "Users", icon: Users, path: "/users" },
-    { name: "Authentication", icon: FileText, path: "/auth" },
-    { name: "Mail", icon: Mail, path: "/mail" },
-    { name: "Widgets", icon: Package, path: "/widgets" },
-    { name: "Settings", icon: Settings, path: "/settings" },
-  ];
+    {
+      title: "Home",
+      items: [
+        { name: "Dashboard", icon: () => <img src={DashboardIcon} className='hover:bg-gray-200 '/>, path: "/" },
+      ]
+    },
+    {
+      title: "Pages",
+      items: [
+        { name: "Special Pages", icon: () => <img src={Game} className='hover:bg-gray-200 '/>, path: "/special" },
+        { name: "Authentication", icon: () => <img src={ShieldDone} className='hover:bg-gray-200 border-radius: [100%] '/>, path: "/auth" },
+        { name: "Users", icon: () => <img src={User} className='hover:bg-gray-200 bg-orange-500 outline-style: solid;'/>, path: "/users" },
+        { name: "Utilities", icon: () => <img src={Utilities} />, path: "/utilities" },
+      ]
+    },
+    {
+      title: "Elements",
+      items: [
+        { name: "Components", icon: () => <img src={Wallet} />, path: "/components" },
+        { name: "Widgets", icon: () => <img src={TicketStar} />, path: "/widgets" },
+      ]
+    }
+  ]
 
   return (
     <aside className="h-screen fixed top-2 left-0">
       <nav 
-        className={`h-full flex flex-col bg-white border-r shadow-sm transition-all duration-300 gap-4
-          ${expanded ? "w-60" : "w-20"}`}
+        className={`h-full flex flex-col bg-white border-r shadow-sm transition-all duration-300 gap-8
+          ${expanded ? "w-45" : "w-20 "}`}
         onMouseEnter={() => setExpanded(true)}
         onMouseLeave={() => setExpanded(false)}
       >
         <div className="flex justify-between items-center">
-          <div className="overflow-hidden transition-all duration-300 ease-in-out">
+          <div className="overflow-hidden transition-all duration-4000 ease-in-out">
             {expanded ? (
-              <img src={MainLogo} alt="Main Logo" className="w-xl justify-center" />
+              <img src={MainLogo} alt="Main Logo" className="gap-2" />
             ) : (
               <button 
             onClick={() => setExpanded((curr) => !curr)}
@@ -40,10 +63,36 @@ const Sidebar = () => {
           </button>
             )}
           </div>
-          
-        </div>
 
-        <ul className="flex-1 px-3 space-y-2">
+        </div>
+        <div className="flex-1 px-3 ">
+          {sidebarItems.map((section, index) => (
+            <div key={section.title} className={`border-b border-width: 3px  ${index !== 0 ? "mt-4" : ""}`}>
+              {expanded && (
+                <p className="text-s font-semibold test-decoration-line: underline  text-gray-500 mb-2 px-3 justify-start ">
+                  {section.title}
+                </p>
+              )}
+              <ul className="space-y-2">
+                {section.items.map((item) => (
+                  <li
+                    key={item.name}
+                    className="relative flex items-center py-2 px-3 font-medium rounded-md cursor-pointer
+                      transition-colors group hover:bg-orange-500 text-gray-600 hover:text-white"
+                  >
+                    <item.icon className="w-5 h-5" />
+                    <span className={`overflow-hidden transition-all ${
+                      expanded ? "w-32 ml-3" : "w-0"
+                    }`}>
+                      {item.name}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        {/* <ul className="flex-1 px-3 space-y-2">
           {sidebarItems.map((item) => (
             <li
               key={item.name}
@@ -56,23 +105,7 @@ const Sidebar = () => {
               </span>
             </li>
           ))}
-        </ul>
-
-        <div className="border-t flex p-3">
-          <img
-            src="https://ui-avatars.com/api/?background=c7d2fe&color=3730a3&bold=true"
-            alt="User"
-            className="w-8 h-8 rounded-md"
-          />
-          <div className={`flex justify-between items-center overflow-hidden transition-all 
-            ${expanded ? "w-32 ml-3" : "w-0"}`}>
-            <div className="leading-4">
-              <h4 className="font-semibold text-sm">John Doe</h4>
-              <span className="text-xs text-gray-600">johndoe@example.com</span>
-            </div>
-            <LogOut className="w-4 h-4 cursor-pointer" />
-          </div>
-        </div>
+        </ul> */}
       </nav>
     </aside>
   );
