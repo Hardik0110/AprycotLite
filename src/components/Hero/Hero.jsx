@@ -3,7 +3,7 @@ import Banner from '../Hero/mainContent assets/banner.png'
 import CouponCard from '../Hero/mainContent assets/CouponCard.png'
 import Menu from '../Hero/mainContent assets/Menu.png'
 import Category from '../Hero/mainContent assets/Category.png'
-import MyCart from '../Hero/mainContent assets/MyCart.png'
+import MyCart from '../Hero/MyCart';
 import MenuSection from './MenuSection';
 
 
@@ -44,11 +44,6 @@ const Hero = () => {
     
             {/* Menu Section */}
             <div>
-              {/* <img 
-                src={Menu} 
-                alt="menu"
-                className="w-[830px] h-[300px] object-cover rounded-lg" 
-              /> */}
               <MenuSection />
             </div>
   
@@ -69,13 +64,13 @@ const Hero = () => {
               alt="Coupon Card" 
               className="ml-5 h-[390px] w-auto object-contain"
             />
-          
+           <MyCart />
           {/* My cart */}
-          <img 
+          {/* <img 
               src={MyCart} 
               alt="MyCart"
               className="h-[590px] ml-5 w-auto object-contain "
-            />
+            /> */}
           </div>
         </div>
       </div>

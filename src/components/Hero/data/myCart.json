@@ -1,0 +1,25 @@
+{
+    "title": "My Cart",
+    "items": [
+      {
+        "name": "Mushroom Pizza",
+        "price": 777,
+        "quantity": 2
+      },
+      {
+        "name": "Italian Pizza",
+        "price": 777,
+        "quantity": 1
+      },
+      {
+        "name": "Sausage Pizza",
+        "price": 777,
+        "quantity": 3
+      },
+      {
+        "name": "Cheese Pizza",
+        "price": 777,
+        "quantity": 2
+      }
+    ]
+}
