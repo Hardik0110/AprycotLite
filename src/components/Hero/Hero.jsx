@@ -1,8 +1,7 @@
 import React from 'react';
-import Banner from '../Hero/mainContent assets/banner.png'
-import CouponCard from '../Hero/mainContent assets/CouponCard.png'
-import Menu from '../Hero/mainContent assets/Menu.png'
-import Category from '../Hero/mainContent assets/Category.png'
+import Banner from '/src/assets/banner.png'
+import CouponCard from '/src/assets/CouponCard.png'
+import Category from '/src/assets/Category.png'
 import MyCart from '../Hero/MyCart';
 import MenuSection from './MenuSection';
 

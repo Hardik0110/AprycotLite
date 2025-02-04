@@ -1,12 +1,12 @@
 import React from 'react';
-import menuItems from './data/menuItems.json';
-import PizzaIcon from './data/Pizzaicon.png';
-import PastaIcon from './data/Fruitsicon.png';
-import SnacksIcon from './data/Snacksicon.png';
-import VeggiesIcon from './data/Veggiesicon.png';
-import HotdogIcon from './data/Hotdogicon.png';
-import BurgerIcon from './data/Burgericon.png';
-import DrinkIcon from './data/Cokeicon.png';
+import menuItems from '../Hero/data/menuItems.json';
+import PizzaIcon from '/src/assets/Pizzaicon.png';
+import PastaIcon from '/src/assets/Fruitsicon.png';
+import SnacksIcon from '/src/assets/Snacksicon.png';
+import VeggiesIcon from '/src/assets/Veggiesicon.png';
+import HotdogIcon from '/src/assets/Hotdogicon.png';
+import BurgerIcon from '/src/assets/Burgericon.png';
+import DrinkIcon from '/src/assets/Cokeicon.png';
 
 const iconMap = {
   Pizza: PizzaIcon,

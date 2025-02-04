@@ -1,9 +1,9 @@
 import React from 'react'
 import myCartData from '../Hero/data/myCart.json'
-import MushroomPizza from '../Hero/data/MushroomPizza.png'
-import ItalianPizza from '../Hero/data/ItalianPizza.png'
-import SausagePizza from '../Hero/data/SausagePizza.png'
-import CheesePizza from '../Hero/data/CheesePizza.png'
+import MushroomPizza from '/src/assets/MushroomPizza.png'
+import ItalianPizza from '/src/assets/ItalianPizza.png'
+import SausagePizza from '/src/assets/SausagePizza.png'
+import CheesePizza from '/src/assets/CheesePizza.png'
 import { Trash2 } from 'lucide-react'
 
 const MyCart = () => {
