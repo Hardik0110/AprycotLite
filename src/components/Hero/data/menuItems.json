@@ -1,0 +1,33 @@
+{
+    "menuTitle": "Menu Category ",
+    "categories": [
+      {
+        "name": "Pizza",
+        "icon": "Pizzaicon"
+      },
+      {
+        "name": "Pasta",
+        "icon": "Pastaicon"
+      },
+      {
+        "name": "Snacks",
+        "icon": "Snacksicon"
+      },
+      {
+        "name": "Veggies",
+        "icon": "Veggiesicon"
+      },
+      {
+        "name": "Hotdog",
+        "icon": "Hotdogicon"
+      },
+      {
+        "name": "Burger",
+        "icon": "Burgericon"
+      },
+      {
+        "name": "Drink",
+        "icon": "Drinkicon"
+      }
+    ]
+}

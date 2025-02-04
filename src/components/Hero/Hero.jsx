@@ -4,6 +4,8 @@ import CouponCard from '../Hero/mainContent assets/CouponCard.png'
 import Menu from '../Hero/mainContent assets/Menu.png'
 import Category from '../Hero/mainContent assets/Category.png'
 import MyCart from '../Hero/mainContent assets/MyCart.png'
+import MenuSection from './MenuSection';
+
 
 const Hero = () => {
   return (
@@ -42,11 +44,12 @@ const Hero = () => {
     
             {/* Menu Section */}
             <div>
-              <img 
+              {/* <img 
                 src={Menu} 
                 alt="menu"
                 className="w-[830px] h-[300px] object-cover rounded-lg" 
-              />
+              /> */}
+              <MenuSection />
             </div>
   
             {/* Category */}
@@ -57,7 +60,7 @@ const Hero = () => {
                 className="w-[830px] h-[300px] object-cover rounded-lg" 
               />
             </div>
-          </div>
+          </div> 
     
           {/* Right Column - Coupon Card */}
           <div className='flex flex-col gap-1/2'>
