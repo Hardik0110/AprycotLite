@@ -1,14 +1,15 @@
-import { useState } from 'react'
-import Sidebar from './components/Sidebar'
-import Searchbar from './components/Searchbar'
+
+import HeroPage from './components/Pages/HeroPage'
 
 export default function App() {
-  const [isExpanded, setIsExpanded] = useState(false);
+  
 
   return (
     <>
-      <Sidebar  />
-      <Searchbar  />
+      {/* <Sidebar  /> */}
+      {/* <Searchbar  /> */}
+      {/* <HeroPage /> */}
+      <HeroPage />
     </>
   )
 }

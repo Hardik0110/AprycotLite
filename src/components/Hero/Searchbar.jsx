@@ -1,8 +1,9 @@
-import React from 'react'
+import React   from 'react'
 import { Search, Bell, Mail, ShoppingCart } from 'lucide-react'
-import UIAvatar from '../assets/uiAvatar.jpg'
+import UIAvatar from '/src/assets/uiAvatar.jpg'
 
 const Searchbar = ({ isExpanded }) => {
+    
   return (
     <div className="w-full bg-white h-16 flex items-center justify-between px-4 shadow-sm">
       <div className="flex-1 flex justify-start items-center mr-4">
