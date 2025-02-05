@@ -15,7 +15,7 @@ const MyCart = () => {
     }
 
     return (
-        <div className="w-auto ml-14 mr-7 h-auto bg-white rounded-xl p-6 shadow-sm">
+        <div className="w-auto ml-14 mr-7 h-[630px] bg-white rounded-xl p-6 shadow-sm">
             <div className="flex justify-between items-center mb-8 pb-8 border-b">
                 <h2 className="text-xl font-bold">{myCartData.title}</h2>
             </div>

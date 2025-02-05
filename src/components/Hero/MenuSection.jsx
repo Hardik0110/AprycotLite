@@ -20,7 +20,7 @@ const iconMap = {
 
 const MenuSection = () => {
     return (
-      <div className="w-[830px] h-[350px] p-3 mt-6">
+      <div className="w-[830px] h-[350px] p-2 mt-6">
         <div className='flex justify-between items-center mb-6'>
           <h2 className="text-2xl font-bold">{menuItems.menuTitle}</h2>
           <button className='flex items-center text-black font-medium '>
@@ -35,12 +35,12 @@ const MenuSection = () => {
               className="mt-8 flex flex-col items-center p-6 rounded-lg bg-white hover:bg-orange-300
                 transition-all duration-300 cursor-pointer group"
             >
-              <div className="w-16 h-16 flex items-center justify-center 
-                bg-orange-500 rounded-full mb-2 ">
+              <div className="flex items-center justify-center 
+                bg-white rounded-full mb-2 ">
                 <img 
                   src={iconMap[category.name]}
                   alt={category.name}
-                  className="w-8 h-8 group-hover:brightness-1 transition-all duration-300"
+                  className="w-12 h-12 group-hover:brightness-1 transition-all duration-300"
                 />
               </div>
               <span className="text-gray-800 text-sm font-medium group-hover:text-white">

@@ -1,0 +1,47 @@
+{
+    "title": "Trending Orders",
+    "items": [
+        {
+            "name": "Italian Salad",
+            "calories": "650 kcal",
+            "price": 899,
+            "topOf": "week",
+            "persons": 2
+        },
+        {
+            "name": "Spicy Chicken",
+            "calories": "450 kcal",
+            "price": 599,
+            "topOf": "month",
+            "persons": 1
+        },
+        {
+            "name": "Veggie Pizza",
+            "calories": "550 kcal",
+            "price": 799,
+            "topOf": "day",
+            "persons": 2
+        },
+        {
+            "name": "Chicken Wings",
+            "calories": "800 kcal",
+            "price": 699,
+            "topOf": "week",
+            "persons": 3
+        },
+        {
+            "name": "Pizza Special",
+            "calories": "750 kcal",
+            "price": 999,
+            "topOf": "month",
+            "persons": 2
+        },
+        {
+            "name": "Garlic Bread",
+            "calories": "400 kcal",
+            "price": 499,
+            "topOf": "day",
+            "persons": 2
+        }
+    ]
+}

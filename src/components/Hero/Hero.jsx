@@ -1,9 +1,11 @@
 import React from 'react';
 import Banner from '/src/assets/banner.png'
 import CouponCard from '/src/assets/CouponCard.png'
-import Category from '/src/assets/Category.png'
+import Category from '../Hero/Category'
 import MyCart from '../Hero/MyCart';
 import MenuSection from './MenuSection';
+import BottomMenu from './BottomMenu';
+import TrendingOrders from './TrendingOrders';
 
 
 const Hero = () => {
@@ -45,14 +47,13 @@ const Hero = () => {
             <div>
               <MenuSection />
             </div>
-  
-            {/* Category */}
+
             <div>
-              <img 
-                src={Category} 
-                alt="category"
-                className="w-[830px] h-[300px] object-cover rounded-lg" 
-              />
+              <BottomMenu />
+            </div>
+            
+            <div>
+              <TrendingOrders />
             </div>
           </div> 
     
@@ -64,12 +65,7 @@ const Hero = () => {
               className="ml-5 h-[390px] w-auto object-contain"
             />
            <MyCart />
-          {/* My cart */}
-          {/* <img 
-              src={MyCart} 
-              alt="MyCart"
-              className="h-[590px] ml-5 w-auto object-contain "
-            /> */}
+           <Category />
           </div>
         </div>
       </div>

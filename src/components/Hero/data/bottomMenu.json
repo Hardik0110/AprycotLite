@@ -1,0 +1,20 @@
+{
+    "items": [
+       {
+        "name": "Spaghetti",
+        "icon": "Spaghetti"
+       },
+       {
+        "name": "Vegetable Pizza",
+        "icon": "VegetablePizza"
+       },
+       {
+        "name": "Mushroom Pizza",
+        "icon": "MushroomPizza"
+       },
+       {
+        "name": "Sweets",
+        "icon": "Sweets"
+       } 
+    ]
+}
