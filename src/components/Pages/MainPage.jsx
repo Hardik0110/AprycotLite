@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Sidebar from '../Hero/Sidebar';
 import MainContent from '../Hero/MainContent';
 
-export default function HeroPage() {
+export default function MainPage() {
   const [expanded, setExpanded] = useState(false);
 
   return (

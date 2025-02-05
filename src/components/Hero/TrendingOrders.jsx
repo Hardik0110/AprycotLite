@@ -2,9 +2,9 @@ import React from 'react'
 import img1 from '/src/assets/TrendingOrders/img1.png'
 import Sweets from '/src/assets/BottomMenu/Sweets.png'
 import img3 from '/src/assets/TrendingOrders/img3.png'
-import img4 from '/src/assets/TrendingOrders/img4.png'
-import img5 from '/src/assets/TrendingOrders/img5.png'
-import img6 from '/src/assets/TrendingOrders/img6.png'
+// import img4 from '/src/assets/TrendingOrders/img4.png'
+// import img5 from '/src/assets/TrendingOrders/img5.png'
+// import img6 from '/src/assets/TrendingOrders/img6.png'
 import Crown from '/src/assets/TrendingOrders/crown.png'
 import trendingOrders from '../Hero/data/trendingOrders.json'
 import { Plus } from 'lucide-react'
@@ -31,7 +31,7 @@ const TrendingOrders = () => {
             <div className="grid grid-cols-3 gap-9">
                 {trendingOrders.items.map((item, index) => (
                     <div key={index} 
-                        className="relative bg-white p-3 rounded-xl hover:bg-orange-200 hover:shadow-lg 
+                        className="relative bg-white p-3 rounded-xl hover:bg-orange-300 hover:shadow-lg 
                             transition-all duration-300 cursor-pointer group h-[180px] w-[230px]"
                     >
                         {/* Image Section */}
@@ -56,7 +56,7 @@ const TrendingOrders = () => {
                                 className='w-4 h-4 object-contain' />
                                 <span className="text-xs text-gray-500">Top of the {item.topOf}</span>
                             </div>
-                            <h3 className="font-semibold text-gray-800 group-hover:text-orange-500 text-sm">
+                            <h3 className="font-semibold text-gray-800 group-hover:text-white text-sm">
                                 {item.name}
                             </h3>
                             

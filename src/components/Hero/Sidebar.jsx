@@ -66,7 +66,7 @@ const Sidebar = ({ setExpandedState }) => {
             ) : (
               <button 
                 onClick={() => setExpanded(curr => !curr)}
-                className="w-12 h-12 rounded-lg hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center"
+                className="w-14 h-14 rounded-lg hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center"
               >
                 <img 
                   src={Logo} 

@@ -1,15 +1,12 @@
 
-import HeroPage from './components/Pages/HeroPage'
+import MainPage from './components/Pages/MainPage'
 
 export default function App() {
   
 
   return (
     <>
-      {/* <Sidebar  /> */}
-      {/* <Searchbar  /> */}
-      {/* <HeroPage /> */}
-      <HeroPage />
+      <MainPage />
     </>
   )
 }
