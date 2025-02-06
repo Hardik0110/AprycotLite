@@ -4,12 +4,16 @@ import { createBrowserRouter, RouterProvider, Route, createRoutesFromElements } 
 import App from './App.jsx'
 import Error404 from './components/Pages/Error404.jsx'
 import './index.css'
+import Login from './components/Pages/Authentication/Login.jsx'
+import Error500 from './components/Pages/Error500.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" errorElement={<Error404 />}>
       <Route index element={<App />} />
       <Route path="error404" element={<Error404 />} />
+      <Route path="error500" element={<Error500 />} />
+      <Route path="login" element={<Login />} />
     </Route>
   )
 )
