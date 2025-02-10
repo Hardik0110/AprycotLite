@@ -6,6 +6,7 @@ import Error404 from './components/Pages/Error404.jsx'
 import './index.css'
 import Login from './components/Pages/Authentication/Login.jsx'
 import Error500 from './components/Pages/Error500.jsx'
+import UserDashboard from './components/Pages/UserDashboard.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -14,6 +15,7 @@ const router = createBrowserRouter(
       <Route path="error404" element={<Error404 />} />
       <Route path="error500" element={<Error500 />} />
       <Route path="login" element={<Login />} />
+      <Route path="userdashboard" element={<UserDashboard />} />
     </Route>
   )
 )

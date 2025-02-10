@@ -10,7 +10,7 @@ const Login = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIsRotated(prev => !prev)
+      setIsRotated(prev => ! prev)
     },3000)
 
     return () => clearInterval(interval)
