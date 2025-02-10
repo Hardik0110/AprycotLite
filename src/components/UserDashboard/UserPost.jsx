@@ -5,7 +5,7 @@ import { Heart, MessageCircle } from 'lucide-react'
 
 const UserPost = () => {
   return (
-    <div className='ml-1 mt-2 w-full h-screen bg-white rounded-lg shadow-xl overflow-auto'>
+    <div className='ml-1 mt-2 w-full h-[800px] bg-white rounded-lg shadow-xl overflow-hidden'>
       {/* Header */}
       <div className='p-4 flex justify-between items-center'>
         <div className='flex items-center gap-3'>
@@ -22,14 +22,12 @@ const UserPost = () => {
         <span className='text-sm text-gray-500'>2 hours ago</span>
       </div>
 
-      
       <img 
         src={PostImage} 
         alt="post" 
         className='w-full h-[300px] object-cover'
       />
 
-      
       <div className='p-4'>
         <div className='flex gap-4 mb-3'>
           <button className='flex items-center gap-2 text-gray-600 hover:text-orange-500 transition-colors'>
@@ -43,13 +41,60 @@ const UserPost = () => {
         </div>
 
         {/* Description */}
-        <p className='text-gray-700'>
+        <p className='text-gray-700 mb-4'>
           Enjoying the most amazing Italian pasta at this new restaurant! 
           The flavors are simply incredible 🍝 #FoodLover #ItalianCuisine
         </p>
+
+        {/* Comments Section */}
+        <div className='space-y-4 mt-4'>
+          {/* Comment 1 */}
+          <div className='flex gap-3'>
+            <img src={UIAvatar} alt="commenter" className='w-8 h-8 rounded-full' />
+            <div className='flex-1'>
+              <div className='bg-gray-50 p-3 rounded-lg'>
+                <h4 className='font-semibold text-sm'>John Doe</h4>
+                <p className='text-sm text-gray-600'>Looks delicious! I need to try this place soon 😋</p>
+              </div>
+              <div className='flex gap-4 mt-2 ml-2 text-xs text-gray-500'>
+                <button className='hover:text-orange-500'>Like</button>
+                <button className='hover:text-orange-500'>Reply</button>
+                <span>2h ago</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Comment 2 */}
+          <div className='flex gap-3'>
+            <img src={UIAvatar} alt="commenter" className='w-8 h-8 rounded-full' />
+            <div className='flex-1'>
+              <div className='bg-gray-50 p-3 rounded-lg'>
+                <h4 className='font-semibold text-sm'>Sarah Smith</h4>
+                <p className='text-sm text-gray-600'>The presentation is amazing! 👌</p>
+              </div>
+              <div className='flex gap-4 mt-2 ml-2 text-xs text-gray-500'>
+                <button className='hover:text-orange-500'>Like</button>
+                <button className='hover:text-orange-500'>Reply</button>
+                <span>1h ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Comment Input */}
+        <div className='mt-6 flex gap-3 items-center'>
+          <img src={UIAvatar} alt="user" className='w-8 h-8 rounded-full' />
+          <div className='flex-1 relative'>
+            <input 
+              type="text"
+              placeholder="Add a comment..."
+              className='w-full px-4 py-2 bg-gray-50 rounded-full border border-gray-200 focus:outline-none focus:border-orange-500'
+            />
+          </div>
+        </div>
       </div>
     </div>
   )
 }
 
-export default UserPost 
+export default UserPost
