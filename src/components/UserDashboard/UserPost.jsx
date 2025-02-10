@@ -15,21 +15,21 @@ const UserPost = () => {
             className='w-10 h-10 rounded-full'
           />
           <div>
-            <h3 className='font-semibold'>John Doe</h3>
-            <p className='text-xs text-gray-500'>New York, USA</p>
+            <h3 className='font-semibold'>Hardik Kubavat</h3>
+            <p className='text-xs text-gray-500'>Ahmedabad, Gujarat </p>
           </div>
         </div>
         <span className='text-sm text-gray-500'>2 hours ago</span>
       </div>
 
-      {/* Post Image */}
+      
       <img 
         src={PostImage} 
         alt="post" 
         className='w-full h-[300px] object-cover'
       />
 
-      {/* Interactions */}
+      
       <div className='p-4'>
         <div className='flex gap-4 mb-3'>
           <button className='flex items-center gap-2 text-gray-600 hover:text-orange-500 transition-colors'>

@@ -25,7 +25,7 @@ const UserBannerTop = () => {
               <h2 className='text-2xl font-bold text-orange-500'>Hardik Kubavat</h2>
               <div className='flex items-center gap-2 text-black/80 mt-2'>
                 <MapPin className='w-4 h-4' />
-                <span>New York, USA</span>
+                <span>Kodinar, USK</span>
               </div>
             </div>
           </div>

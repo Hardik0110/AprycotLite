@@ -5,6 +5,7 @@ import UserPost from './UserPost'
 import Suggestions from './Suggestions'
 import About from './About'
 import OnlineOrder from './OnlineOrder'
+import OnlineOrder2 from './OnlineOrder2'
 
 
 const Main = () => {
@@ -16,7 +17,7 @@ const Main = () => {
                 <div className='col-span-3 space-y-8'> 
                     <News />
                     <OnlineOrder />
-                    
+                    <OnlineOrder2 />
                 </div>
 
                 {/* Middle Column */}
