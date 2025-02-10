@@ -30,17 +30,17 @@ const UserBannerTop = () => {
             </div>
           </div>
 
-          <div className='flex gap-6'>
-            <div className='text-center bg-orange-400 border rounded-lg '>
-              <p className='text-2xl font-bold text-white'>245</p>
+          <div className='flex gap-6 '>
+            <div className='text-center bg-orange-500  rounded-lg px-4'>
+              <p className='text-xl font-bold text-white'>245</p>
               <p className='text-white/80'>Reviews</p>
             </div>
-            <div className='text-center bg-orange-400 border rounded-lg'>
-              <p className='text-2xl font-bold text-white'>84</p>
+            <div className='text-center bg-orange-500  rounded-lg px-4'>
+              <p className='text-xl font-bold text-white'>84</p>
               <p className='text-white/80'>Photos</p>
             </div>
-            <div className='text-center bg-orange-400 border rounded-lg'>
-              <p className='text-2xl font-bold text-white'>1.4K</p>
+            <div className='text-center bg-orange-500  rounded-lg px-4'>
+              <p className='text-xl font-bold text-white'>1.4K</p>
               <p className='text-white/80'>Followers</p>
             </div>
           </div>
