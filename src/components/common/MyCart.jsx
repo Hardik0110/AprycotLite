@@ -1,5 +1,5 @@
 import React from 'react'
-import myCartData from '../Hero/data/myCart.json'
+import myCartData from '../common/data/myCart.json'
 import MushroomPizza from '/src/assets/MushroomPizza.png'
 import ItalianPizza from '/src/assets/ItalianPizza.png'
 import SausagePizza from '/src/assets/SausagePizza.png'

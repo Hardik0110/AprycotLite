@@ -2,11 +2,8 @@ import React from 'react'
 import img1 from '/src/assets/TrendingOrders/img1.png'
 import Sweets from '/src/assets/BottomMenu/Sweets.png'
 import img3 from '/src/assets/TrendingOrders/img3.png'
-// import img4 from '/src/assets/TrendingOrders/img4.png'
-// import img5 from '/src/assets/TrendingOrders/img5.png'
-// import img6 from '/src/assets/TrendingOrders/img6.png'
 import Crown from '/src/assets/TrendingOrders/crown.png'
-import trendingOrders from '../Hero/data/trendingOrders.json'
+import trendingOrders from '../common/data/trendingOrders.json'
 import { Plus } from 'lucide-react'
 
 const TrendingOrders = () => {

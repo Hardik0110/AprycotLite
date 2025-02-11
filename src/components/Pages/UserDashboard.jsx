@@ -1,5 +1,5 @@
 import React , {useState} from 'react'
-import Sidebar from '../Hero/Sidebar';
+import Sidebar from '../common/Sidebar';
 import UserContent from '../UserDashboard/UserContent';
 
 

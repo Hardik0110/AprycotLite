@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Sidebar from '../Hero/Sidebar';
-import MainContent from '../Hero/MainContent';
+import Sidebar from '../common/Sidebar';
+import MainContent from '../common/MainContent';
 
 export default function MainPage() {
   const [expanded, setExpanded] = useState(false);

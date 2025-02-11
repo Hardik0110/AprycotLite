@@ -1,5 +1,5 @@
 import React from 'react';
-import menuItems from '../Hero/data/menuItems.json';
+import menuItems from '../common/data/menuItems.json';
 import PizzaIcon from '/src/assets/Pizzaicon.png';
 import PastaIcon from '/src/assets/Fruitsicon.png';
 import SnacksIcon from '/src/assets/Snacksicon.png';

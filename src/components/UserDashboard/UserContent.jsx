@@ -1,6 +1,6 @@
 import React from 'react'
 import Main from './Main'
-import Searchbar from '../Hero/Searchbar'
+import Searchbar from '../common/Searchbar'
 
 const UserContent = ( { expanded }) => {
   return (
