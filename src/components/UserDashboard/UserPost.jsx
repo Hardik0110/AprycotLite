@@ -57,9 +57,15 @@ const UserPost = () => {
                 <p className='text-sm text-gray-600'>Looks delicious! I need to try this place soon 😋</p>
               </div>
               <div className='flex gap-4 mt-2 ml-2 text-xs text-gray-500'>
-                <button className='hover:text-orange-500'>Like</button>
-                <button className='hover:text-orange-500'>Reply</button>
-                <span>2h ago</span>
+                <button className='hover:text-orange-500 text-orange-500 flex items-center gap-1 group'>
+                  <Heart className='w-3 h-3 fill-red-500  group-hover:text-orange-500 ' />
+                  Like
+                </button>
+                <button className='hover:text-orange-700 text-orange-500 flex items-center gap-1'>
+                  <MessageCircle className='w-3 h-3' />
+                  Reply
+                </button>
+                <span className='text-orange-500'>2h ago</span>
               </div>
             </div>
           </div>
@@ -73,9 +79,15 @@ const UserPost = () => {
                 <p className='text-sm text-gray-600'>The presentation is amazing! 👌</p>
               </div>
               <div className='flex gap-4 mt-2 ml-2 text-xs text-gray-500'>
-                <button className='hover:text-orange-500'>Like</button>
-                <button className='hover:text-orange-500'>Reply</button>
-                <span>1h ago</span>
+                <button className='hover:text-orange-500 text-orange-500 flex items-center gap-1 group'>
+                  <Heart className='w-3 h-3 fill-red-500 text-red-500 group-hover:text-orange-500 group-hover:fill-orange-500' />
+                  Like
+                </button>
+                <button className='hover:text-orange-700 text-orange-500 flex items-center gap-1'>
+                  <MessageCircle className='w-3 h-3' />
+                  Reply
+                </button>
+                <span className='text-orange-500'>1h ago</span>
               </div>
             </div>
           </div>
@@ -88,7 +100,7 @@ const UserPost = () => {
             <input 
               type="text"
               placeholder="Add a comment..."
-              className='w-full px-4 py-2 bg-gray-50 rounded-full border border-gray-200 focus:outline-none focus:border-orange-500'
+              className='w-full px-4 py-2 bg-gray-50 rounded-full border border-orange-400 focus:outline-none focus:border-orange-500'
             />
           </div>
         </div>

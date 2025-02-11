@@ -6,6 +6,7 @@ import Suggestions from './Suggestions'
 import About from './About'
 import OnlineOrder from './OnlineOrder'
 import OnlineOrder2 from './OnlineOrder2'
+import Comment from './Comment'
 
 
 const Main = () => {
@@ -21,8 +22,9 @@ const Main = () => {
                 </div>
 
                 {/* Middle Column */}
-                <div className='col-span-6 space-y-2'> 
+                <div className='col-span-6 space-y-8'> 
                     <UserPost />
+                    <Comment />
                     
                 </div>
 

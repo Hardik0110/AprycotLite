@@ -10,7 +10,6 @@ import Wallet from '/src/assets/Wallet.png'
 import TicketStar from '/src/assets/Ticket Star.png'
 import { useNavigate } from 'react-router-dom'
 
-
 const Sidebar = ({ setExpandedState }) => {
   const [expanded, setExpanded] = useState(false);
   const navigate = useNavigate();
@@ -28,30 +27,64 @@ const Sidebar = ({ setExpandedState }) => {
     {
       title: "Home",
       items: [
-        { name: "Dashboard", icon: DashboardIcon, path: "/userdashboard" },
+        { 
+          name: "Dashboard", 
+          icon: DashboardIcon, 
+          path: "/userdashboard",
+          className: "brightness-[0.4]" 
+        },
       ]
     },
     {
       title: "Pages",
       items: [
-        { name: "Special Pages", icon: Game, path: "/special" },
-        { name: "Authentication", icon: ShieldDone, path: "/login" },
-        { name: "Users", icon: User, path: "/error500", className: "bg-orange-500 rounded-lg"},  
-        { name: "Utilities", icon: Utilities, path: "/utilities" },
+        { 
+          name: "Special Pages", 
+          icon: Game, 
+          path: "/special",
+          className: "brightness-[0.4]" 
+        },
+        { 
+          name: "Authentication", 
+          icon: ShieldDone, 
+          path: "/login",
+          className: "brightness-[0.4]" 
+        },
+        { 
+          name: "Users", 
+          icon: User, 
+          path: "/error500", 
+          className: "bg-orange-500 rounded-lg"
+        },  
+        { 
+          name: "Utilities", 
+          icon: Utilities, 
+          path: "/utilities",
+          className: "brightness-[0.4]" 
+        },
       ] 
     },
     {
       title: "Elements",
       items: [
-        { name: "Components", icon: Wallet, path: "/components" },
-        { name: "Widgets", icon: TicketStar, path: "/widgets" },
+        { 
+          name: "Components", 
+          icon: Wallet, 
+          path: "/components",
+          className: "brightness-[0.4]" 
+        },
+        { 
+          name: "Widgets", 
+          icon: TicketStar, 
+          path: "/widgets",
+          className: "brightness-[0.4]" 
+        },
       ]
     }
   ];
 
   return (
     <div className="flex min-h-screen bg-gray-50">
-      
       <nav 
         className={`fixed top-2 left-0 h-[calc(100vh-16px)] bg-white border-r shadow-lg transition-all duration-300 ease-in-out z-10
           ${expanded ? "w-[200px]" : "w-20"}`}
@@ -60,7 +93,7 @@ const Sidebar = ({ setExpandedState }) => {
       >
         <div className="p-4 flex justify-center items-center h-16">
           <div className={`transition-all duration-300 ease-in-out overflow-hidden
-            ${expanded ? "w-full" : "w-12"}`}>
+            ${expanded ? "w-full" : "w-full"}`}>
             {expanded ? (
               <div className="w-full flex justify-start">
                 <img 
@@ -72,12 +105,12 @@ const Sidebar = ({ setExpandedState }) => {
             ) : (
               <button 
                 onClick={() => setExpanded(curr => !curr)}
-                className="w-14 h-14 rounded-lg hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center"
+                className="w-full flex items-center justify-center"
               >
                 <img 
                   src={Logo} 
                   alt="Toggle" 
-                  className="h-10 w-15"  
+                  className="h-14 w-14"  
                 />
               </button>
             )}
@@ -104,8 +137,8 @@ const Sidebar = ({ setExpandedState }) => {
                       <img 
                         src={item.icon} 
                         alt={item.name}
-                        className={`w-6 h-6 group-hover:brightness-[200%] transition-all duration-200 ${item.className || ''}`}
-                        />
+                        className={`w-6 h-6 group-hover:brightness-[200%] transition-all duration-200 ${item.className}`}
+                      />
                     </div>
                     <span className={`whitespace-nowrap overflow-hidden transition-all duration-300 ease-in-out
                       ${expanded ? "ml-3 opacity-100 w-32" : "w-0 opacity-0"} group-hover:text-white`}>
@@ -118,7 +151,6 @@ const Sidebar = ({ setExpandedState }) => {
           ))}
         </div>
       </nav>
-
     </div>
   );
 };
