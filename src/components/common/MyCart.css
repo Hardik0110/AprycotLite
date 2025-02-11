@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .cart-container {
+    @apply w-auto ml-14 mr-7 h-[630px] bg-white rounded-xl p-6 shadow-sm;
+  }
+
+  .cart-header {
+    @apply flex justify-between items-center mb-8 pb-8 border-b;
+  }
+
+  .cart-title {
+    @apply text-xl font-bold;
+  }
+
+  .cart-items-container {
+    @apply space-y-4;
+  }
+
+  .cart-item {
+    @apply flex items-center justify-between p-2 hover:bg-orange-50 rounded-lg transition-all duration-300;
+  }
+
+  .item-details {
+    @apply flex items-center gap-4;
+  }
+
+  .item-image-container {
+    @apply w-20 h-20 rounded-full shadow-md transition-all duration-300;
+  }
+
+  .item-image {
+    @apply w-20 h-20 rounded-full object-cover shadow-lg hover:ring-4 hover:ring-orange-200 transition-all duration-300;
+  }
+
+  .item-info {
+    @apply font-medium text-sm;
+  }
+
+  .item-quantity {
+    @apply text-sm text-gray-500;
+  }
+
+  .item-price-section {
+    @apply flex items-center gap-3;
+  }
+
+  .item-price {
+    @apply font-semibold text-orange-500;
+  }
+
+  .delete-button {
+    @apply w-5 h-5 text-red-500 cursor-pointer hover:text-red-600 transition-colors duration-300;
+  }
+
+  .checkout-container {
+    @apply flex justify-center mt-6;
+  }
+
+  .checkout-button {
+    @apply bg-orange-500 text-white py-2 px-8 rounded-full font-semibold 
+    hover:bg-orange-600 transition-colors duration-300;
+  }
+}

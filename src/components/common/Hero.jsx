@@ -6,66 +6,43 @@ import MyCart from '../common/MyCart';
 import MenuSection from './MenuSection';
 import BottomMenu from './BottomMenu';
 import TrendingOrders from './TrendingOrders';
-
+import './hero.css'
 
 const Hero = () => {
   return (
-    <div className="min-h-screen w-full bg-[#FFF6D8] overflow-y-auto">
-      <div className="p-4">
-        <div className="flex gap-4">
+    <div className="hero-container">
+      <div className="hero-layout">
+        <div className="hero-columns">
           {/* Left Column */}
-          <div className="flex flex-col gap-2">
+          <div className="hero-left-column">
             {/* Banner Section */}
-            <div className="relative w-[830px] h-[340px] rounded-lg overflow-hidden">
-              <img 
-                src={Banner} 
-                alt="Banner" 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#ffffff]/80 to-transparent">
-                <div className="absolute inset-0 p-5 flex flex-col justify-between">
-                  <div className="ml-5">
-                    <div className="mt-20 font-bold text-orange-500">
-                      Deal of the Day
-                    </div>
-                    <h2 className="mt-2 text-4xl font-bold text-black">
-                      Hello, Hardik Kubavat
-                    </h2>
-                    <p className="text-black mt-6 text-s font-semibold">
-                      Get <span className="text-orange-500">Free Delivery</span> on every weekend
+            <div className="hero-banner">
+              <img src={Banner} alt="Banner" className="banner-image" />
+              <div className="banner-overlay">
+                <div className="banner-content">
+                  <div className="banner-text-container">
+                    <div className="deal-text">Deal of the Day</div>
+                    <h2 className="welcome-text">Hello, Hardik Kubavat</h2>
+                    <p className="delivery-text">
+                      Get <span className="highlight-text">Free Delivery</span> on every weekend
                     </p>
-                    <button className="bg-orange-500 mt-12 text-white px-6 py-2 rounded-full font-semibold 
-                      hover:bg-opacity-90 transition-all duration-300">
-                      Check Menu
-                    </button>
+                    <button className="menu-button">Check Menu</button>
                   </div>
                 </div>
               </div>
             </div>
     
-            {/* Menu Section */}
-            <div>
-              <MenuSection />
-            </div>
-
-            <div>
-              <BottomMenu />
-            </div>
-            
-            <div>
-              <TrendingOrders />
-            </div>
+            {/* Menu Sections */}
+            <div><MenuSection /></div>
+            <div><BottomMenu /></div>
+            <div><TrendingOrders /></div>
           </div> 
     
-          {/* Right Column - Coupon Card */}
-          <div className='flex flex-col gap-1/2'>
-            <img 
-              src={CouponCard} 
-              alt="Coupon Card" 
-              className="ml-5 h-[390px] w-auto object-contain"
-            />
-           <MyCart />
-           <Category />
+          {/* Right Column */}
+          <div className="hero-right-column">
+            <img src={CouponCard} alt="Coupon Card" className="coupon-card" />
+            <MyCart />
+            <Category />
           </div>
         </div>
       </div>

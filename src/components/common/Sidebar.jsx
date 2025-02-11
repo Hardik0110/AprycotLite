@@ -38,7 +38,7 @@ const Sidebar = ({ setExpandedState }) => {
         { name: "Authentication", icon: ShieldDone, path: "/login" },
         { name: "Users", icon: User, path: "/error500", className: "bg-orange-500 rounded-lg"},  
         { name: "Utilities", icon: Utilities, path: "/utilities" },
-      ]
+      ] 
     },
     {
       title: "Elements",

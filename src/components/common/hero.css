@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Bottom Menu Component */
+  /* ...existing bottom menu styles... */
+
+  /* Category Component */
+  /* ...existing category styles... */
+
+  /* Hero Component */
+  .hero-container {
+    @apply min-h-screen w-full bg-[#FFF6D8] overflow-y-auto;
+  }
+
+  .hero-layout {
+    @apply p-4;
+  }
+
+  .hero-columns {
+    @apply flex gap-4;
+  }
+
+  .hero-left-column {
+    @apply flex flex-col gap-2;
+  }
+
+  .hero-banner {
+    @apply relative w-[830px] h-[340px] rounded-lg overflow-hidden;
+  }
+
+  .banner-image {
+    @apply w-full h-full object-cover;
+  }
+
+  .banner-overlay {
+    @apply absolute inset-0 bg-gradient-to-r from-[#ffffff]/80 to-transparent;
+  }
+
+  .banner-content {
+    @apply absolute inset-0 p-5 flex flex-col justify-between;
+  }
+
+  .banner-text-container {
+    @apply ml-5;
+  }
+
+  .deal-text {
+    @apply mt-20 font-bold text-orange-500;
+  }
+
+  .welcome-text {
+    @apply mt-2 text-4xl font-bold text-black;
+  }
+
+  .delivery-text {
+    @apply text-black mt-6 text-sm font-semibold; 
+  }
+
+  .highlight-text {
+    @apply text-orange-500;
+  }
+
+  .menu-button {
+    @apply bg-orange-500 mt-12 text-white px-6 py-2 rounded-full font-semibold 
+    hover:bg-opacity-90 transition-all duration-300;
+  }
+
+  .hero-right-column {
+    @apply flex flex-col gap-2; /* Changed from gap-1/2 to gap-2 */
+  }
+
+  .coupon-card {
+    @apply ml-5 h-[390px] w-auto object-contain;
+  }
+}

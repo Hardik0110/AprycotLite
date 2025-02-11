@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .menu-container {
+    @apply w-[830px] h-[350px] p-2 mt-6;
+  }
+
+  .menu-header {
+    @apply flex justify-between items-center mb-6;
+  }
+
+  .menu-title {
+    @apply text-2xl font-bold;
+  }
+
+  .view-all-button {
+    @apply flex items-center text-black font-medium;
+  }
+
+  .arrow-icon {
+    @apply ml-4 w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-white text-sm;
+  }
+
+  .menu-grid {
+    @apply grid grid-cols-7 gap-5;
+  }
+
+  .menu-item {
+    @apply mt-8 flex flex-col items-center p-6 rounded-lg bg-white 
+    transition-all duration-300 cursor-pointer;
+  }
+
+  .item-icon-container {
+    @apply flex items-center justify-center bg-white rounded-full mb-2;
+  }
+
+  .item-icon {
+    @apply w-12 h-12;
+  }
+
+  .item-name {
+    @apply text-gray-800 text-sm font-medium;
+  }
+
+  .item-divider {
+    @apply h-[2px] w-8 bg-gray-200 mt-5;
+  }
+
+  .item-arrow {
+    @apply mt-5 w-6 h-6 bg-orange-500 rounded-full 
+    flex items-center justify-center text-white text-sm;
+  }
+}
+
+/* Custom hover states */
+.menu-item {
+  transition: all 300ms;
+}
+
+.menu-item:hover {
+  background-color: theme('colors.orange.300');
+}
+
+.menu-item:hover .item-name {
+  color: theme('colors.white');
+}
+
+.menu-item:hover .item-divider {
+  background-color: theme('colors.orange.500');
+}
+
+.menu-item:hover .item-arrow {
+  background-color: theme('colors.white');
+  color: theme('colors.orange.500');
+}  

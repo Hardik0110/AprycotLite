@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .searchbar-container {
+    @apply w-full bg-white h-16 flex items-center justify-between px-4 shadow-sm;
+  }
+
+  .search-section {
+    @apply flex-1 flex justify-start items-center mr-4;
+  }
+
+  .search-input-container {
+    @apply relative;
+  }
+
+  .search-icon {
+    @apply absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5;
+  }
+
+  .search-input {
+    @apply pl-10 pr-4 py-2 rounded-full border border-gray-300 
+    focus:outline-none focus:border-orange-500 
+    transition-all duration-300 ease-in-out;
+  }
+
+  .actions-container {
+    @apply flex items-center gap-6;
+  }
+
+  .icon-buttons {
+    @apply flex items-center gap-6;
+  }
+
+  .icon-button {
+    @apply w-12 h-12 flex items-center justify-center 
+    hover:bg-orange-500 rounded-full transition-colors duration-200;
+  }
+
+  .icon {
+    @apply h-6 w-6 text-gray-600;
+  }
+
+  .icon-button:hover .icon {
+    @apply text-white;
+  }
+
+  .profile-section {
+    @apply flex items-center gap-3 border-l pl-6 cursor-pointer;
+  }
+
+  .profile-info {
+    @apply text-right;
+  }
+
+  .profile-name {
+    @apply font-medium text-sm;
+  }
+
+  .profile-role {
+    @apply text-xs text-gray-500;
+  }
+
+  .profile-avatar {
+    @apply w-10 h-10 rounded-full object-cover;
+  }
+}
