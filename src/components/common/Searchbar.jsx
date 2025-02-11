@@ -1,8 +1,10 @@
 import React   from 'react'
 import { Search, Bell, Mail, ShoppingCart } from 'lucide-react'
 import UIAvatar from '/src/assets/uiAvatar.jpg'
+import { useNavigate } from 'react-router-dom'
 
 const Searchbar = ({ isExpanded }) => {
+  const navigate = useNavigate();
     
   return (
     <div className="w-full bg-white h-16 flex items-center justify-between px-4 shadow-sm">
@@ -33,7 +35,8 @@ const Searchbar = ({ isExpanded }) => {
           ))}
         </div>
 
-        <div className="flex items-center gap-3 border-l pl-6">
+        <div className="flex items-center gap-3 border-l pl-6"
+        onClick={() => navigate('/userdashboard')}>
           <div className="text-right">
             <h4 className="font-medium text-sm">Hardik Kubavat</h4>
             <p className="text-xs text-gray-500">Software Engineer</p>

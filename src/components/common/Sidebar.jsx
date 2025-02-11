@@ -8,29 +8,35 @@ import User from '/src/assets/3 User.png'
 import Utilities from '/src/assets/Utilities.png'
 import Wallet from '/src/assets/Wallet.png'
 import TicketStar from '/src/assets/Ticket Star.png'
+import { useNavigate } from 'react-router-dom'
 
 
 const Sidebar = ({ setExpandedState }) => {
   const [expanded, setExpanded] = useState(false);
+  const navigate = useNavigate();
 
   const handleExpand = (state) => {
     setExpanded(state);
     setExpandedState(state);
   }
 
+  const handleNavigate = (path) => {
+    navigate(path)
+  }
+
   const sidebarItems = [
     {
       title: "Home",
       items: [
-        { name: "Dashboard", icon: DashboardIcon, path: "/" },
+        { name: "Dashboard", icon: DashboardIcon, path: "/userdashboard" },
       ]
     },
     {
       title: "Pages",
       items: [
         { name: "Special Pages", icon: Game, path: "/special" },
-        { name: "Authentication", icon: ShieldDone, path: "/auth" },
-        { name: "Users", icon: User, path: "/users", className: "bg-orange-500 rounded-lg"},  
+        { name: "Authentication", icon: ShieldDone, path: "/login" },
+        { name: "Users", icon: User, path: "/error500", className: "bg-orange-500 rounded-lg"},  
         { name: "Utilities", icon: Utilities, path: "/utilities" },
       ]
     },
@@ -90,6 +96,7 @@ const Sidebar = ({ setExpandedState }) => {
                 {section.items.map((item) => (
                   <li
                     key={item.name}
+                    onClick={() => navigate(item.path)}
                     className="group relative flex items-center py-2 px-3 rounded-md cursor-pointer
                       transition-all duration-200 ease-in-out hover:bg-orange-500"
                   >

@@ -9,6 +9,7 @@ const UserDashboard = () => {
     <div className="flex min-h-screen ">
     <Sidebar setExpandedState={setExpanded} />
     <UserContent expanded={expanded} />
+    
   </div>
   )
 }
