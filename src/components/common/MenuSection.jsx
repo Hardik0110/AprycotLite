@@ -7,7 +7,7 @@ import VeggiesIcon from '/src/assets/Veggiesicon.png';
 import HotdogIcon from '/src/assets/Hotdogicon.png';
 import BurgerIcon from '/src/assets/Burgericon.png';
 import DrinkIcon from '/src/assets/Cokeicon.png';
-import './MenuSections.css';
+import './menuSections.css' ;
 
 const iconMap = {
   Pizza: PizzaIcon,

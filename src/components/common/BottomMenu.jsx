@@ -5,7 +5,7 @@ import VegetablePizza from '/src/assets/BottomMenu/VegetablePizza.png'
 import MushroomPizza from '/src/assets/MushroomPizza.png'
 import { Star, Plus } from 'lucide-react'
 import bottomMenu from './data/bottomMenu.json'
-// import './index.css'
+import './bottomMenu.css'
 
 
 const BottomMenu = () => {
