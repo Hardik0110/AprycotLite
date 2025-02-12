@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import MainLogo from '/src/assets/MainLogo.png'
 import Logo from '/src/assets/Logo.png'
 import DashboardIcon from '/src/assets/DashboardIcon.png'
@@ -19,10 +20,6 @@ const Sidebar = ({ setExpandedState }) => {
     setExpandedState(state);
   }
 
-  const handleNavigate = (path) => {
-    navigate(path)
-  }
-
   const sidebarItems = [
     {
       title: "Home",
@@ -31,7 +28,7 @@ const Sidebar = ({ setExpandedState }) => {
           name: "Dashboard", 
           icon: DashboardIcon, 
           path: "/userdashboard",
-          className: "brightness-[0.4]" 
+          isActive: true
         },
       ]
     },
@@ -42,25 +39,25 @@ const Sidebar = ({ setExpandedState }) => {
           name: "Special Pages", 
           icon: Game, 
           path: "/special",
-          className: "brightness-[0.4]" 
+          isActive: false
         },
         { 
           name: "Authentication", 
           icon: ShieldDone, 
           path: "/login",
-          className: "brightness-[0.4]" 
+          isActive: false
         },
         { 
           name: "Users", 
           icon: User, 
           path: "/error500", 
-          className: "bg-orange-500 rounded-lg"
+          isActive: false
         },  
         { 
           name: "Utilities", 
           icon: Utilities, 
           path: "/utilities",
-          className: "brightness-[0.4]" 
+          isActive: false
         },
       ] 
     },
@@ -71,13 +68,13 @@ const Sidebar = ({ setExpandedState }) => {
           name: "Components", 
           icon: Wallet, 
           path: "/components",
-          className: "brightness-[0.4]" 
+          isActive: false
         },
         { 
           name: "Widgets", 
           icon: TicketStar, 
           path: "/widgets",
-          className: "brightness-[0.4]" 
+          isActive: false
         },
       ]
     }
@@ -110,7 +107,7 @@ const Sidebar = ({ setExpandedState }) => {
                 <img 
                   src={Logo} 
                   alt="Toggle" 
-                  className="h-14 w-14"  
+                  className="h-10 w-12"  
                 />
               </button>
             )}
@@ -133,11 +130,14 @@ const Sidebar = ({ setExpandedState }) => {
                     className="group relative flex items-center py-2 px-3 rounded-md cursor-pointer
                       transition-all duration-200 ease-in-out hover:bg-orange-500"
                   >
-                    <div className="w-8 h-8 flex items-center justify-center">
+                    <div className={`w-8 h-8 flex items-center justify-center rounded-lg
+                      ${item.isActive ? 'bg-orange-500' : 'bg-gray-100'}`}>
                       <img 
                         src={item.icon} 
                         alt={item.name}
-                        className={`w-6 h-6 group-hover:brightness-[200%] transition-all duration-200 ${item.className}`}
+                        className={`w-5 h-5 transition-all duration-200
+                          ${item.isActive ? 'brightness-200' : 'brightness-[0.4]'}
+                          group-hover:brightness-[200%]`}
                       />
                     </div>
                     <span className={`whitespace-nowrap overflow-hidden transition-all duration-300 ease-in-out
@@ -153,6 +153,10 @@ const Sidebar = ({ setExpandedState }) => {
       </nav>
     </div>
   );
+};
+
+Sidebar.propTypes = {
+  setExpandedState: PropTypes.func.isRequired,
 };
 
 export default Sidebar;
