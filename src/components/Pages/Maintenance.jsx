@@ -66,7 +66,7 @@ const MaintenancePage = () => {
       </div>
 
       <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">
-        We're Currently Performing Maintenance
+        We are Currently Performing Maintenance
       </h1>
 
       {/* Message */}

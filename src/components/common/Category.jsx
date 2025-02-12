@@ -1,4 +1,4 @@
-import React from 'react'
+//import React from 'react'
 import categoryData from './data/category.json'
 
 const Category = () => {

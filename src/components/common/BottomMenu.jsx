@@ -1,4 +1,4 @@
-import React from 'react'
+//import React from 'react'
 import Spaghetti from '/src/assets/BottomMenu/Spaghetti.png'
 import Sweets from '/src/assets/BottomMenu/Sweets.png'
 import VegetablePizza from '/src/assets/BottomMenu/VegetablePizza.png'

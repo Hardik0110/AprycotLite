@@ -127,11 +127,11 @@ const Sidebar = ({ setExpandedState }) => {
                   <li
                     key={item.name}
                     onClick={() => navigate(item.path)}
-                    className="group relative flex items-center py-2 px-3 rounded-md cursor-pointer
+                    className="group relative flex items-center py-2 px-3 rounded-full cursor-pointer
                       transition-all duration-200 ease-in-out hover:bg-orange-500"
                   >
-                    <div className={`w-8 h-8 flex items-center justify-center rounded-lg
-                      ${item.isActive ? 'bg-orange-500' : 'bg-gray-100'}`}>
+                    <div className={`w-10 h-10 flex items-center justify-center rounded-full
+                      ${item.isActive ? 'bg-orange-500' : 'bg-gray-200'}`}>
                       <img 
                         src={item.icon} 
                         alt={item.name}
