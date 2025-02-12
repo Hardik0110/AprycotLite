@@ -7,6 +7,7 @@ import './index.css'
 import Login from './components/Pages/Authentication/Login.jsx'
 import Error500 from './components/Pages/Error500.jsx'
 import UserDashboard from './components/Pages/UserDashboard.jsx'
+import Maintenance from './components/Pages/Maintenance.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -16,6 +17,7 @@ const router = createBrowserRouter(
       <Route path="error500" element={<Error500 />} />
       <Route path="login" element={<Login />} />
       <Route path="userdashboard" element={<UserDashboard />} />
+      <Route path='maintenance' element={<Maintenance />} />
     </Route>
   )
 )

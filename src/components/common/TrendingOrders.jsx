@@ -1,4 +1,3 @@
-import React from 'react'
 import img1 from '/src/assets/TrendingOrders/img1.png'
 import Sweets from '/src/assets/BottomMenu/Sweets.png'
 import img3 from '/src/assets/TrendingOrders/img3.png'

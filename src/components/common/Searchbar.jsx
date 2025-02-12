@@ -1,9 +1,10 @@
-import React from 'react'
+import 'react'
 import { Search, Bell, Mail, ShoppingCart } from 'lucide-react'
 import UIAvatar from '/src/assets/uiAvatar.jpg'
 import { useNavigate } from 'react-router-dom'
 import './searchbar.css'
 
+// eslint-disable-next-line react/prop-types
 const Searchbar = ({ isExpanded }) => {
   const navigate = useNavigate();
     
